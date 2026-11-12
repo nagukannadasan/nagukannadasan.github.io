@@ -1,0 +1,8 @@
+{{ $page := .page }}
+{{ range .entries }}
+  {{ $u := cond (eq .URL "#") "#" (.URL | relURL) }}
+  <li class="{{ if .HasChildren }}has-sub{{ end }}{{ if and (ne .URL "#") (eq $page.RelPermalink $u) }} current{{ end }}">
+    <a href="{{ $u }}"{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+    {{ if .HasChildren }}<ul class="sub">{{ partial "menu.html" (dict "entries" .Children "page" $page) }}</ul>{{ end }}
+  </li>
+{{ end }}

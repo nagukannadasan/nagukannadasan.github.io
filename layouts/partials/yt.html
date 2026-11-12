@@ -1,0 +1,2 @@
+{{- /* Input: YouTube video ID. Click-to-play: thumbnail first, iframe loaded on click (see main.js). */ -}}
+<span class="yt" data-id="{{ . }}"><a class="yt-link" href="https://www.youtube.com/watch?v={{ . }}" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/{{ . }}/hqdefault.jpg" alt="YouTube video" loading="lazy"><span class="yt-play" aria-hidden="true"></span></a></span>

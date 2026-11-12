@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="cols">
+  <div class="col-main">
+    <h1 class="list-title">{{ .Title }}</h1>
+    {{ range (where site.RegularPages "Section" "posts").GroupByDate "January 2006" }}
+      <h4 class="block-title" id="m{{ (index .Pages 0).Date.Format "2006-01" }}"><span>{{ .Key }}</span></h4>
+      <ul class="plain-list archive-list">
+        {{ range .Pages }}<li><time>{{ .Date.Format "Jan 2" }}</time> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+      </ul>
+    {{ end }}
+  </div>
+  <aside class="col-side">{{ partial "sidebar.html" . }}</aside>
+</div>
+{{ end }}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Featured on நாகு கண்ணதாசன்</title>
+		<link>http://localhost:1313/categories/featured/</link>
+		<description>Recent content in Featured on நாகு கண்ணதாசன்</description>
+		<generator>Hugo</generator>
+		<language>ta-IN</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 12 Nov 2026 09:00:00 +0530</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/featured/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>ஒரு உதாரணப் பதிவு (மாதிரி)</title>
+				<link>http://localhost:1313/2026/11/example-post/</link>
+				<pubDate>Thu, 12 Nov 2026 09:00:00 +0530</pubDate>
+				<guid>http://localhost:1313/2026/11/example-post/</guid>
+				<description>&lt;p&gt;&lt;span class=&#34;yt&#34; data-id=&#34;L3qKMkauEc8&#34;&gt;&lt;a class=&#34;yt-link&#34; href=&#34;https://www.youtube.com/watch?v=L3qKMkauEc8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://i.ytimg.com/vi/L3qKMkauEc8/hqdefault.jpg&#34; alt=&#34;YouTube video&#34; loading=&#34;lazy&#34;&gt;&lt;span class=&#34;yt-play&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;இந்தப் பதிவில் படம் எதுவும் இல்லை. மேலே உள்ள YouTube இணைப்பு தானாகவே இயக்கக்கூடிய காணொளியாகக் காட்டப்படும்; முகப்புப் பக்கத்தில் அதன் thumbnail படமாகத் தோன்றும்.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;மேற்கோள்களை இப்படி எழுதலாம்.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;பயன்படுத்தி &lt;strong&gt;தடித்த எழுத்து&lt;/strong&gt;, &lt;em&gt;சாய்வு&lt;/em&gt;, &lt;a href=&#34;https://example.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;இணைப்புகள்&lt;/a&gt;,&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,74 @@
+{{ $posts := where site.RegularPages "Section" "posts" }}
+
+{{/* Sliders: one per configured category */}}
+{{ range site.Params.sliders }}
+  {{ $cat := .category }}{{ $title := .title }}
+  {{ $items := first 5 (where $posts "Params.categories" "intersect" (slice $cat)) }}
+  {{ if $items }}
+  <section class="widget">
+    <h4 class="block-title"><span>{{ $title }}</span></h4>
+    <div class="slider" data-slider>
+      {{ range $i, $p := $items }}
+      <a class="slide {{ if eq $i 0 }}active{{ end }}" href="{{ $p.RelPermalink }}">
+        {{ $t := partial "func/thumb.html" $p }}{{ if $t.url }}<img src="{{ $t.url }}" alt="" loading="lazy">{{ else }}<span class="ph ph-slide">{{ substr $p.Title 0 1 }}</span>{{ end }}
+        <span class="slide-meta">
+          <span class="slide-cat">{{ $cat }}</span>
+          <strong>{{ $p.Title }}</strong>
+          <time>{{ $p.Date.Format site.Params.dateFormat }}</time>
+        </span>
+      </a>
+      {{ end }}
+      {{ if gt (len $items) 1 }}<button type="button" class="s-prev" aria-label="Previous">‹</button><button type="button" class="s-next" aria-label="Next">›</button>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+{{ end }}
+
+{{ $older := first 6 (after 4 $posts) }}
+{{ if $older }}
+<section class="widget">
+  <h4 class="block-title"><span>{{ site.Params.olderTitle }}</span></h4>
+  <ul class="plain-list">{{ range $older }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+</section>
+{{ end }}
+
+{{ with site.Taxonomies.categories }}
+<section class="widget">
+  <h4 class="block-title"><span>{{ site.Params.categoriesTitle }}</span></h4>
+  <ul class="plain-list cat-list">
+    {{ range first 14 .ByCount }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="count">{{ .Count }}</span></a></li>{{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ $months := $posts.GroupByDate "January 2006" }}
+{{ if $months }}
+<section class="widget">
+  <h4 class="block-title"><span>{{ site.Params.archiveTitle }}</span></h4>
+  <ul class="plain-list">
+    {{ range first 12 $months }}<li><a href="{{ "archive/" | relURL }}#m{{ (index .Pages 0).Date.Format "2006-01" }}">{{ .Key }}</a></li>{{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ with site.Params.linkWidget }}{{ if .links }}
+<section class="widget">
+  <h4 class="block-title"><span>{{ .title }}</span></h4>
+  <ul class="plain-list">{{ range .links }}<li><a href="{{ .url | relURL }}">{{ .name }}</a></li>{{ end }}</ul>
+</section>
+{{ end }}{{ end }}
+
+{{ with site.Params.subscribe }}{{ if .action }}
+<section class="widget">
+  <h4 class="block-title"><span>{{ .title }}</span></h4>
+  <form class="subscribe" action="{{ .action }}" method="post" target="_blank">
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+{{ end }}{{ end }}
+
+<section class="widget">
+  <h4 class="block-title"><span>Subscribe in a reader</span></h4>
+  <p><a class="rss-link" href="{{ "index.xml" | relURL }}">RSS</a></p>
+</section>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>கடிதம் on நாகு கண்ணதாசன்</title>
+		<link>http://localhost:1313/categories/%E0%AE%95%E0%AE%9F%E0%AE%BF%E0%AE%A4%E0%AE%AE%E0%AF%8D/</link>
+		<description>Recent content in கடிதம் on நாகு கண்ணதாசன்</description>
+		<generator>Hugo</generator>
+		<language>ta-IN</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 12 Sep 2026 08:00:00 +0530</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/%E0%AE%95%E0%AE%9F%E0%AE%BF%E0%AE%A4%E0%AE%AE%E0%AF%8D/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>நன்றிக் கடிதம்</title>
+				<link>http://localhost:1313/2026/09/letter-2/</link>
+				<pubDate>Sat, 12 Sep 2026 08:00:00 +0530</pubDate>
+				<guid>http://localhost:1313/2026/09/letter-2/</guid>
+				<description>&lt;p&gt;நண்பர்களுக்கு, நிகழ்வுக்கு வந்து ஆதரவளித்த அனைவருக்கும் மனமார்ந்த நன்றி.&lt;/p&gt;&#xA;&lt;p&gt;இது இரண்டாவது பத்தி. இங்கே உங்கள் உண்மையான உரையை எழுதுங்கள். Markdown பயன்படுத்தி &lt;strong&gt;தடித்த எழுத்து&lt;/strong&gt;, &lt;em&gt;சாய்வு&lt;/em&gt;, &lt;a href=&#34;https://example.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;இணைப்புகள்&lt;/a&gt;, பட்டியல்கள் ஆகியவற்றைச் சேர்க்கலாம்.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;மேற்கோள்களை இப்படி எழுதலாம்.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

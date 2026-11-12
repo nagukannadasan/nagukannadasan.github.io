@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="cols">
+  <article class="col-main post">
+    {{ with .Params.categories }}<div class="post-cats">{{ range . }}<a href="{{ (site.GetPage (printf "/categories/%s" (. | urlize))).RelPermalink }}">{{ . }}</a>{{ end }}</div>{{ end }}
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ if eq .Section "posts" }}<div class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format site.Params.dateFormat }}</time></div>{{ end }}
+    {{ with .Params.image }}<img class="post-hero" src="{{ . | relURL }}" alt="">{{ end }}
+    {{ with .Params.youtube }}{{ $id := partial "func/ytid.html" . }}{{ if $id }}<div class="post-video">{{ partial "yt.html" $id }}</div>{{ end }}{{ end }}
+    <div class="post-content">{{ .Content }}</div>
+    {{ with .Params.tags }}<div class="post-tags">{{ range . }}<a href="{{ (site.GetPage (printf "/tags/%s" (. | urlize))).RelPermalink }}">#{{ . }}</a>{{ end }}</div>{{ end }}
+    {{ if eq .Section "posts" }}
+    <nav class="post-nav">
+      {{ with .NextInSection }}<a class="prev" href="{{ .RelPermalink }}">« {{ .Title }}</a>{{ end }}
+      {{ with .PrevInSection }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }} »</a>{{ end }}
+    </nav>
+    {{ end }}
+  </article>
+  <aside class="col-side">{{ partial "sidebar.html" . }}</aside>
+</div>
+{{ end }}

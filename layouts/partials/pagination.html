@@ -1,0 +1,7 @@
+{{ with . }}{{ if gt .TotalPages 1 }}
+<nav class="pager" aria-label="Pagination">
+  {{ if .HasPrev }}<a href="{{ .Prev.URL }}">« முந்தையவை</a>{{ else }}<span></span>{{ end }}
+  <span class="pager-info">{{ .PageNumber }} / {{ .TotalPages }}</span>
+  {{ if .HasNext }}<a href="{{ .Next.URL }}">அடுத்தவை »</a>{{ else }}<span></span>{{ end }}
+</nav>
+{{ end }}{{ end }}

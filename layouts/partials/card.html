@@ -1,0 +1,13 @@
+{{ $p := . }}
+{{ $t := partial "func/thumb.html" $p }}
+<article class="card">
+  <a class="thumb" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{ if $t.url }}<img src="{{ $t.url }}" alt="" loading="lazy">{{ else }}<span class="ph">{{ substr $p.Title 0 1 }}</span>{{ end }}
+    {{ if $t.yt }}<span class="yt-badge" aria-hidden="true"></span>{{ end }}
+  </a>
+  <div class="card-body">
+    <h3 class="card-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+    <div class="meta"><time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format site.Params.dateFormat }}</time></div>
+    <p class="excerpt">{{ with $p.Params.description }}{{ . }}{{ else }}{{ $p.Content | plainify | replaceRE `https?://\S+` "" | truncate 190 }}{{ end }}</p>
+  </div>
+</article>

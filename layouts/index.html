@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $hero := first 3 (where $posts "Params.featured" true) }}
+{{ if lt (len $hero) 1 }}{{ $hero = first 3 $posts }}{{ end }}
+{{ $rest := complement $hero $posts }}
+{{ $pag := .Paginate $rest }}
+
+{{ if eq $pag.PageNumber 1 }}
+<section class="hero">
+  {{ range $hero }}{{ partial "card.html" . }}{{ end }}
+  {{ partial "ticker.html" . }}
+</section>
+{{ end }}
+
+<div class="cols">
+  <div class="col-main">
+    <h4 class="block-title"><span>{{ site.Params.todayLabel }}</span></h4>
+    {{ range $pag.Pages }}{{ partial "card.html" . }}{{ end }}
+    {{ partial "pagination.html" $pag }}
+  </div>
+  <aside class="col-side">{{ partial "sidebar.html" . }}</aside>
+</div>
+{{ end }}

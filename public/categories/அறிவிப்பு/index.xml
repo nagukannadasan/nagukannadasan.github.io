@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>அறிவிப்பு on நாகு கண்ணதாசன்</title>
+		<link>http://localhost:1313/categories/%E0%AE%85%E0%AE%B1%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81/</link>
+		<description>Recent content in அறிவிப்பு on நாகு கண்ணதாசன்</description>
+		<generator>Hugo</generator>
+		<language>ta-IN</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 12 Nov 2026 07:30:00 +0530</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/%E0%AE%85%E0%AE%B1%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>வலைப்பதிவுக்கு வரவேற்பு</title>
+				<link>http://localhost:1313/2026/11/welcome/</link>
+				<pubDate>Thu, 12 Nov 2026 07:30:00 +0530</pubDate>
+				<guid>http://localhost:1313/2026/11/welcome/</guid>
+				<description>&lt;p&gt;இந்த வலைப்பதிவின் முதல் மாதிரிப் பதிவு இது. இங்கே உங்கள் கட்டுரைகள், கடிதங்கள், கேள்வி பதில்கள் எல்லாம் வெளியாகும்.&lt;/p&gt;&#xA;&lt;p&gt;இது இரண்டாவது பத்தி. இங்கே உங்கள் உண்மையான உரையை எழுதுங்கள். Markdown பயன்படுத்தி &lt;strong&gt;தடித்த எழுத்து&lt;/strong&gt;, &lt;em&gt;சாய்வு&lt;/em&gt;, &lt;a href=&#34;https://example.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;இணைப்புகள்&lt;/a&gt;, பட்டியல்கள் ஆகியவற்றைச் சேர்க்கலாம்.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;மேற்கோள்களை இப்படி எழுதலாம்.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>இலக்கிய விழா அறிவிப்பு</title>
+				<link>http://localhost:1313/2026/11/event/</link>
+				<pubDate>Thu, 12 Nov 2026 06:10:00 +0530</pubDate>
+				<guid>http://localhost:1313/2026/11/event/</guid>
+				<description>&lt;p&gt;வரும் வாரம் நடைபெறும் இலக்கிய விழாவைப் பற்றிய ஒரு மாதிரி அறிவிப்பு. நாள், இடம், பங்கேற்பாளர்கள் ஆகிய விவரங்களை இங்கே சேர்க்கலாம்.&lt;/p&gt;&#xA;&lt;p&gt;இது இரண்டாவது பத்தி. இங்கே உங்கள் உண்மையான உரையை எழுதுங்கள். Markdown பயன்படுத்தி &lt;strong&gt;தடித்த எழுத்து&lt;/strong&gt;, &lt;em&gt;சாய்வு&lt;/em&gt;, &lt;a href=&#34;https://example.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;இணைப்புகள்&lt;/a&gt;, பட்டியல்கள் ஆகியவற்றைச் சேர்க்கலாம்.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;மேற்கோள்களை இப்படி எழுதலாம்.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

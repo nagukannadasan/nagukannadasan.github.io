@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="cols">
+  <div class="col-main">
+    <h1 class="list-title">{{ .Title }}</h1>
+    <ul class="plain-list cat-list big">
+      {{ range .Data.Terms.ByCount }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="count">{{ .Count }}</span></a></li>{{ end }}
+    </ul>
+  </div>
+  <aside class="col-side">{{ partial "sidebar.html" . }}</aside>
+</div>
+{{ end }}

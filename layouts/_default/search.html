@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="cols">
+  <div class="col-main">
+    <h1 class="list-title">{{ .Title }}</h1>
+    <form class="search-page-form" action="" method="get">
+      <input type="search" id="search-input" name="q" placeholder="தேடு…" autofocus>
+      <button type="submit">தேடு</button>
+    </form>
+    <p id="search-status" class="meta"></p>
+    <div id="search-results" data-index="{{ "index.json" | relURL }}"></div>
+  </div>
+  <aside class="col-side">{{ partial "sidebar.html" . }}</aside>
+</div>
+{{ end }}

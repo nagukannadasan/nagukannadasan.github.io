@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="cols">
+  <div class="col-main">
+    <h1 class="list-title">{{ .Title }}</h1>
+    {{ $pag := .Paginate .Pages }}
+    {{ range $pag.Pages }}{{ partial "card.html" . }}{{ else }}<p>பதிவுகள் இல்லை.</p>{{ end }}
+    {{ partial "pagination.html" $pag }}
+  </div>
+  <aside class="col-side">{{ partial "sidebar.html" . }}</aside>
+</div>
+{{ end }}

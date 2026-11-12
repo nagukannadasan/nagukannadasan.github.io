@@ -1,0 +1,16 @@
+{{- /* Input: a page. Returns dict: url (image to show, or ""), yt (true if it is a YouTube thumbnail).
+      Order: front-matter image > YouTube thumbnail (front-matter `youtube`, else first YouTube link in body) > none. */ -}}
+{{- $p := . -}}
+{{- $url := "" -}}
+{{- $yt := false -}}
+{{- with $p.Params.image -}}
+  {{- $url = . | relURL -}}
+{{- else -}}
+  {{- $id := partial "func/ytid.html" ($p.Params.youtube | default "") -}}
+  {{- if not $id -}}{{- $id = partial "func/ytid.html" $p.RawContent -}}{{- end -}}
+  {{- if $id -}}
+    {{- $url = printf "https://i.ytimg.com/vi/%s/hqdefault.jpg" $id -}}
+    {{- $yt = true -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "url" $url "yt" $yt) -}}

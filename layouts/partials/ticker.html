@@ -1,0 +1,12 @@
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $t := first (site.Params.ticker.count | default 8) (where $posts "Params.trending" true) }}
+{{ if lt (len $t) 1 }}{{ $t = first (site.Params.ticker.count | default 8) $posts }}{{ end }}
+{{ if $t }}
+<div class="ticker">
+  <span class="ticker-label">{{ site.Params.ticker.label }}</span>
+  <ul class="ticker-list">
+    {{ range $i, $p := $t }}<li class="{{ if eq $i 0 }}active{{ end }}"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></li>{{ end }}
+  </ul>
+  <span class="ticker-nav"><button type="button" data-dir="-1" aria-label="Previous">‹</button><button type="button" data-dir="1" aria-label="Next">›</button></span>
+</div>
+{{ end }}

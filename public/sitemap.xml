@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/featured/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/yt1/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/2026/11/example-post/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E0%AE%A8%E0%AF%87%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-11-12T09:00:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/archive/</loc>
+  </url>
+</urlset>

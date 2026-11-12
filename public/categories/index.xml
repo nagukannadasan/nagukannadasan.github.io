@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Categories on நாகு கண்ணதாசன்</title>
+		<link>http://localhost:1313/categories/</link>
+		<description>Recent content in Categories on நாகு கண்ணதாசன்</description>
+		<generator>Hugo</generator>
+		<language>ta-IN</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 12 Nov 2026 09:00:00 +0530</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Featured</title>
+				<link>http://localhost:1313/categories/featured/</link>
+				<pubDate>Thu, 12 Nov 2026 09:00:00 +0530</pubDate>
+				<guid>http://localhost:1313/categories/featured/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>நேர்காணல்கள்</title>
+				<link>http://localhost:1313/categories/%E0%AE%A8%E0%AF%87%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/</link>
+				<pubDate>Thu, 12 Nov 2026 09:00:00 +0530</pubDate>
+				<guid>http://localhost:1313/categories/%E0%AE%A8%E0%AF%87%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

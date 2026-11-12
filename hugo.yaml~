@@ -1,0 +1,94 @@
+baseURL: "https://<your-username>.github.io/"
+locale: "ta-IN"
+defaultContentLanguage: "ta"
+title: "எழுத்தாளர் பெயர்"
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 8
+
+taxonomies:
+  category: categories
+  tag: tags
+
+permalinks:
+  page:
+    posts: "/:year/:month/:slugorfilename/"
+
+outputs:
+  home: [HTML, RSS, JSON]   # JSON powers the search page
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true          # lets you paste YouTube iframes etc. into posts
+
+params:
+  tagline: "Writer · எழுத்தாளர்"
+  dateFormat: "January 2, 2006"
+  todayLabel: "இன்று"
+  accent: "#2271e8"
+
+  # Header banner image (put the file in static/uploads/). Recommended ~1750 x 255 px, JPG/WebP.
+  # Leave empty to show the plain text title instead.
+  banner: ""            # e.g. "/uploads/banner.jpg"
+  bannerAlt: ""
+  nav:                  # menu bar colours (defaults match the reference: navy bar, sky-blue text)
+    bg: "#00006b"
+    text: "#44a9f2"
+    activeBg: "#000000"
+
+  ticker:
+    label: "கவனிக்க"        # posts with `trending: true` show here (else latest)
+    count: 8
+
+  # Sidebar sliders: one per category (category name = exactly as in front matter)
+  sliders:
+    - {title: "கவனிக்க", category: "Featured"}
+    - {title: "தமிழ் விக்கி", category: "தமிழ் விக்கி"}
+    - {title: "முழுமையறிவு", category: "முழுமையறிவு"}
+
+  olderTitle: "முந்தைய பதிவுகள் சில"
+  categoriesTitle: "கட்டுரை வகைகள்"
+  archiveTitle: "பதிவுகளின் டைரி"
+
+  # Free-form link widget in sidebar (like the book/discussion links)
+  linkWidget:
+    title: "வெண்முரசு விவாதங்கள்"
+    links:
+      - {name: "விஷ்ணுபுரம்", url: "/categories/விஷ்ணுபுரம்/"}
+      - {name: "கொற்றவை", url: "/categories/கொற்றவை/"}
+
+  # Email subscription: paste your Buttondown / Mailchimp / Substack form action URL. Empty = hidden.
+  subscribe:
+    title: "பதிவுகளை உடனடியாக பெற"
+    action: ""
+
+  footer:
+    contactTitle: "தொடர்புக்கு"
+    contacts:
+      - {label: "இணையதள நிர்வாகி", email: "admin@example.com"}
+      - {label: "ஆசிரியரைத் தொடர்பு கொள்ள", email: "author@example.com"}
+    copyright: "© 2026 உங்கள் பெயர்"
+    note: "இந்த இணையதளத்தில் வெளியாகும் கட்டுரைகளை இணையத்தில் சுதந்திரமாகப் பகிரலாம்."
+  social:
+    - {name: "Facebook", url: "https://facebook.com/"}
+    - {name: "YouTube", url: "https://youtube.com/"}
+    - {name: "Twitter", url: "https://twitter.com/"}
+
+menus:
+  main:
+    - {identifier: home,   name: "முகப்பு", url: "/", weight: 1}
+    - {identifier: about,  name: "அறிமுகம்", pageRef: "/about", weight: 2}
+    - {identifier: works,  name: "படைப்புகள்", url: "#", weight: 3}
+    - {identifier: stories, name: "கதைகள்", url: "/categories/கதைகள்/", parent: works, weight: 1}
+    - {identifier: books,   name: "நூல்கள்", url: "/categories/நூல்கள்/", parent: works, weight: 2}
+    - {identifier: collections, name: "தொகுப்புகள்", url: "#", parent: works, weight: 3}
+    - {identifier: coll1, name: "தொகுப்பு ஒன்று", url: "/categories/தொகுப்பு-ஒன்று/", parent: collections, weight: 1}
+    - {identifier: coll2, name: "தொகுப்பு இரண்டு", url: "/categories/தொகுப்பு-இரண்டு/", parent: collections, weight: 2}
+    - {identifier: interviews, name: "நேர்காணல்கள்", url: "/categories/நேர்காணல்கள்/", weight: 4}
+    - {identifier: english, name: "English", url: "#", weight: 5}
+    - {identifier: en-about, name: "About", pageRef: "/about", parent: english, weight: 1}
+    - {identifier: en-trans, name: "Translations", url: "/categories/translations/", parent: english, weight: 2}
+    - {identifier: archive, name: "பதிவுகள்", pageRef: "/archive", weight: 6}
+    - {identifier: contact, name: "தொடர்புக்கு", url: "#contact", weight: 7}

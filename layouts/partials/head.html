@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.tagline }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AlternativeOutputFormats }}{{ if eq .Name "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}{{ end }}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ if .IsPage }}{{ $t := partial "func/thumb.html" . }}{{ with $t.url }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}{{ end }}
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700&family=Noto+Serif+Tamil:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<style>:root{--accent:{{ site.Params.accent | default "#2271e8" | safeCSS }};--nav-bg:{{ site.Params.nav.bg | default "#00006b" | safeCSS }};--nav-text:{{ site.Params.nav.text | default "#44a9f2" | safeCSS }};--nav-active:{{ site.Params.nav.activeBg | default "#000000" | safeCSS }};}</style>

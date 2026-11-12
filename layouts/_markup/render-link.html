@@ -1,0 +1,8 @@
+{{- $text := .Text | plainify | htmlUnescape -}}
+{{- $id := "" -}}
+{{- if hasPrefix $text "http" }}{{ $id = partial "func/ytid.html" .Destination }}{{ end -}}
+{{- if $id -}}
+{{- partial "yt.html" $id -}}
+{{- else -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if hasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}

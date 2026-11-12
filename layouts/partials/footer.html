@@ -1,0 +1,16 @@
+<footer class="site-footer" id="contact">
+  <div class="footer-cols">
+    <div>
+      <h4>{{ site.Params.footer.contactTitle }}</h4>
+      {{ range site.Params.footer.contacts }}<p>{{ .label }}: {{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}{{ with .phone }}<a href="{{ printf "tel:%s" (replaceRE `[^+0-9]` "" .) | safeURL }}">{{ . }}</a>{{ end }}</p>{{ end }}
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <p class="social">{{ range site.Params.social }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}<a href="{{ "index.xml" | relURL }}">RSS</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>{{ site.Params.footer.copyright }}</span>
+    <span class="note">{{ site.Params.footer.note }}</span>
+  </div>
+</footer>

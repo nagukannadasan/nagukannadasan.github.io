@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: <your-username>/<your-repo>     # e.g. annamalai/annamalai.github.io
+  branch: main
+
+media_folder: static/uploads
+public_folder: /uploads
+
+# Tamil titles slugify badly, so name files by date+time
+slug:
+  encoding: unicode
+
+collections:
+  - name: posts
+    label: "பதிவுகள் (Posts)"
+    label_singular: "Post"
+    folder: content/posts
+    create: true
+    slug: "{{year}}{{month}}{{day}}-{{hour}}{{minute}}"
+    sortable_fields: [date, title]
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    fields:
+      - {name: title, label: "தலைப்பு (Title)", widget: string}
+      - {name: date, label: "தேதி (Date)", widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ"}
+      - {name: categories, label: "வகைகள் (Categories)", widget: list, required: false,
+         hint: "Type exactly as in the sidebar. Use 'Featured' to appear in the Featured slider."}
+      - {name: tags, label: "Tags", widget: list, required: false}
+      - {name: description, label: "சுருக்கம் (Excerpt, optional)", widget: text, required: false}
+      - {name: image, label: "படம் (Image, optional)", widget: image, required: false}
+      - {name: youtube, label: "YouTube link (optional, shown at top of post)", widget: string, required: false,
+         hint: "Or just paste a YouTube link on its own line inside the body - it becomes a playable video."}
+      - {name: featured, label: "Top block-இல் காட்டு (Featured)", widget: boolean, default: false}
+      - {name: trending, label: "கவனிக்க ticker-இல் காட்டு (Trending)", widget: boolean, default: false}
+      - {name: body, label: "உரை (Body)", widget: markdown}
+
+  - name: pages
+    label: "Pages"
+    files:
+      - name: about
+        label: "அறிமுகம் (About)"
+        file: content/about.md
+        fields:
+          - {name: title, label: Title, widget: string}
+          - {name: body, label: Body, widget: markdown}

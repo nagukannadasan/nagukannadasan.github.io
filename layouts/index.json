@@ -1,0 +1,2 @@
+{{- $posts := where site.RegularPages "Section" "posts" -}}
+[{{ range $i, $p := $posts }}{{ if $i }},{{ end }}{{ dict "title" $p.Title "url" $p.RelPermalink "date" ($p.Date.Format site.Params.dateFormat) "summary" ($p.Content | plainify | truncate 180) "content" ($p.Content | plainify | truncate 5000) | jsonify }}{{ end }}]
