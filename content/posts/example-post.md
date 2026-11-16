@@ -1,8 +1,13 @@
 ---
-title: "ஒரு உதாரணப் பதிவு (மாதிரி)"
+title: ஒரு உதாரணப் பதிவு (மாதிரி)
 date: 2026-11-12T09:00:00+05:30
-categories: ["Featured", "நேர்காணல்கள்"]
-tags: [YT1]
+categories:
+  - நேர்காணல்கள்
+tags:
+  - YT1
+description: ''
+image: ''
+youtube: ''
 featured: true
 trending: false
 ---
@@ -14,5 +19,3 @@ https://youtu.be/L3qKMkauEc8
 > மேற்கோள்களை இப்படி எழுதலாம்.
 
 பயன்படுத்தி **தடித்த எழுத்து**, *சாய்வு*, [இணைப்புகள்](https://example.com),
-
-
