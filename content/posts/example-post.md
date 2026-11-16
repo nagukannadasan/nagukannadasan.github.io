@@ -8,7 +8,7 @@ tags:
 description: ''
 image: ''
 youtube: ''
-featured: true
+featured: false
 trending: false
 ---
 
